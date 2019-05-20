@@ -20,7 +20,7 @@ HTML, CSS, 자바스크립트를 사용해 크로스 플랫폼 데스크탑 애�
 
 먼저 위의 유튜브를 가볍게 보고 나서 다음 코드 처럼  study-electron 이라는 폴더를 만들고 필요한 것들을 설치했다.
 
-~~~
+~~~js
 mkdir study-electron
 cd study-electron
 
