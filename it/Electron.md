@@ -34,7 +34,7 @@ npm install --dev electron-packager
 
 처음에는 유튜브 내용대로 electron-packager로 build했는데 하다 보니 가끔 오류를 토해내면서 오락가락 하기에 구글에 검색. 다음과 같이  electron-builder 를 설치해서 추가 해줬다.
 
-~~~
+~~~js
 "scripts": {
   "start": "electron .",
   "build": "electron-packager . --out=dist --asar --overwrite --all",
@@ -49,7 +49,7 @@ npm install --dev electron-packager
 
 ### 개발자 도구, 창 닫기 처리, macOS에서 사용자가 dock의 app 아이콘을 클릭 했을 때 창 재 생성하기 등의 기능
 
-~~~
+~~~js
 const { app, BrowserWindow } = require('electron')
 
 // window 객체는 전역 변수로 유지. 이렇게 하지 않으면, 
@@ -99,7 +99,7 @@ app.on('activate', () => {
 
 ### macOS 커스텀 dock menu
 
-~~~
+~~~js
 const { app, Menu } = require('electron')
 
 const dockMenu = Menu.buildFromTemplate([
@@ -121,7 +121,7 @@ app.dock.setMenu(dockMenu)
 
 ### 라이브리로드
 
-~~~
+~~~js
 // npm install --dev electron-reload
 require('electron-reload')(__dirname);
 
@@ -132,7 +132,7 @@ win.loadURL(`file://${__dirname}/index.html`);
 
 독바에서 아이콘 우클릭 - Finder에서 보기 - 프로그램 우클릭 - 패키지 내용 보기 - Contents - Info.plist
 
-~~~
+~~~js
 <plist>
 <dict>
   ...
@@ -147,7 +147,7 @@ win.loadURL(`file://${__dirname}/index.html`);
 
 우선 당장 알림을 보낼 만한 게 없어서 임시로 알림 이벤트를 발생할 텍스트 div 를 만들어 두고 거기에 이벤트를 줬다.
 
-~~~
+~~~js
 document.body.querySelector('#event-noti').addEventListener('click', function() {
 	let myNotification = new Notification('알림을 보냅니다.', {
 		body: '뭔 알림을 보내야 할지 아직 모르겠어요'
@@ -161,7 +161,7 @@ document.body.querySelector('#event-noti').addEventListener('click', function() 
 
 맥북에서 잘 됐는데 윈10에서 실행시켜 보니 알림이 안 왔다. 구글 검색을 해보고 여러 시도를 해보다가 아래 소스를 package.json와 index.js 에 아래 코드를 추가하니 성공했다.
 
-~~~
+~~~js
 // package.json
 
 "build": {
