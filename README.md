@@ -7,10 +7,10 @@
 ---
 
 1. [COCi 리뉴얼](/it/COCi.md) 
-  - 2019.05~
-  - AWS lambda, cloud9, cloudWatch, dynamoDB, SQS
+&nbsp;&nbsp;- 2019.05~
+&nbsp;&nbsp;- AWS lambda, cloud9, cloudWatch, dynamoDB, SQS
 2. [일렉트론](/it/Electron.md)
-  - 2019.04
-  - electron
+&nbsp;&nbsp;- 2019.04
+&nbsp;&nbsp;- electron
   
 
