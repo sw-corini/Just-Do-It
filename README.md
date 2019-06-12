@@ -14,4 +14,6 @@
 2. [COCi 리뉴얼](/it/COCi.md) 
 
     - 2019.05~
-    - AWS lambda, cloud9, cloudWatch, dynamoDB, SQS
+    - AWS lambda, cloud9, cloudWatch, dynamoDB, SQS, 
+    - Antd, React
+    - GCP cloud watch, Firestore, Firebase functions
